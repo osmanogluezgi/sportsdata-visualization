@@ -3,9 +3,9 @@ A data scraping and visualization project on sports data
 
 ## Table of contents
 * [Introduction](#introduction)
+* [Key Findings and Visuals](#key-findings-and-visuals)
 * [Scraping](#scraping)
 * [Dataset](#dataset)
-* [Key Findings and Visuals](#key-findings-and-visuals)
 
 ## Introduction
 This project is prepared for the class "Sports Data Visualization" at TU Dortmund, with the collaboration of students of Data Science and Journalism. It aims to find a relationship between the length of an athlete's career and the success gained throughout one's career until retirement while searching for a changing pattern of a specific age range where the success is attained based on each sport. 
@@ -15,6 +15,18 @@ The analysis is on the data of the retired athletes of *handball, tennis, motorr
 1. The later the age of success, the longer the career of an athlete.
 2. The earlier athletes start their career, the earlier they retire.
 3. There is an individual age for each sport, where athletes have the most success.
+
+## Key Findings and Visuals
+* As expected, the age where the athletes are the most successful changes between sports. 
+  - For ice skating, the average age of success is lower than other sports, especially for females. 
+  - For motorrace, the average age of success is the highest and it should be noted that the retirement age is also the highest which partly explains higher success ages.
+* Comparison of mean age of success between sports shows that there is a unique age of success for each sport. We could confirm this by ANOVA test, which checks whether there is a difference in the means of the groups for success age.
+* We were able to confirm our hypotheses "The later the age of success, the longer the career of an athlete." for all sports except motorrace. 
+  - To check the relationship better, we focused on the athletes who achieves their peak after 30 (age_success >=30) and there we saw an inverse significant relationship for motorracers, where the later comes the success, the shorter the career length.
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/77609842/197524797-55a7f3a0-3bef-40ba-b6f1-d59c07b5e27d.png" width="70%" />
+  <img src="https://user-images.githubusercontent.com/77609842/197524724-6b5facc7-f8c6-4c14-9f28-9113e39b2840.png" width="70%" />
+</p>
 
 ## Scraping
 Data scraping is done using the packages **RSelenium** and **Rvest**.
@@ -45,14 +57,3 @@ start_age | start_date - birthdate |
 retire_age | retirement_date - birthdate |
 sex | male/female |
 
-## Key Findings and Visuals
-* As expected, the age where the athletes are the most successful changes between sports. 
-  - For ice skating, the average age of success is lower than other sports, especially for females. 
-  - For motorrace, the average age of success is the highest and it should be noted that the retirement age is also the highest which partly explains higher success ages.
-* Comparison of mean age of success between sports shows that there is a unique age of success for each sport. We could confirm this by ANOVA test, which checks whether there is a difference in the means of the groups for success age.
-* We were able to confirm our hypotheses "The later the age of success, the longer the career of an athlete." for all sports except motorrace. 
-  - To check the relationship better, we focused on the athletes who achieves their peak after 30 (age_success >=30) and there we saw an inverse significant relationship for motorracers, where the later comes the success, the shorter the career length.
-<p align="middle">
-  <img src="https://user-images.githubusercontent.com/77609842/197524797-55a7f3a0-3bef-40ba-b6f1-d59c07b5e27d.png" width="70%" />
-  <img src="https://user-images.githubusercontent.com/77609842/197524724-6b5facc7-f8c6-4c14-9f28-9113e39b2840.png" width="70%" />
-</p>
