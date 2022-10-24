@@ -8,11 +8,13 @@ A data scraping and visualization project on sports data
 * [Key Findings and Visuals](#key-findings-and-visuals)
 
 ## Introduction
-This project is prepared for the class "Sports Data Visualization" at TU Dortmund, with the collaboration of students of Data Science and Journalism. It aims to find a relationship between the length of an athlete's career and the success gained throughout one's career until retirement while searching for a changing pattern of a specific age range where the success is attained based on each sport. The analysis is on the data of the retired athletes of *handball, tennis, motorrace and ice skating* and looks for evidence for the hypotheses below;
+This project is prepared for the class "Sports Data Visualization" at TU Dortmund, with the collaboration of students of Data Science and Journalism. It aims to find a relationship between the length of an athlete's career and the success gained throughout one's career until retirement while searching for a changing pattern of a specific age range where the success is attained based on each sport. 
 
-1. The later the age of success, the longer the career of an athlete
-2. The earlier athletes start their career, the earlier they retire
-3. There is an individual age for each sport, where athletes have the most success (the age is lower for sports like ice skating in comparison to motorrace)
+The analysis is on the data of the retired athletes of *handball, tennis, motorrace and ice skating* and looks for evidence for the hypotheses below;
+
+1. The later the age of success, the longer the career of an athlete.
+2. The earlier athletes start their career, the earlier they retire.
+3. There is an individual age for each sport, where athletes have the most success.
 
 ## Scraping
 * Handball: The data set is created by scraping the websites https://www.handball-base.com and "https://www.playmakerstats.com/. Using the names of the athletes, the data was scraped using RSelenium, The first source is used to get the players' **name**, **nation**, **birthdate**, **first and last season** they played. The second source is used to get their success history, which are the data fields such as **number of goals scored**, **number of games played**,and **the respective season** which are used to create the **best rank** and **date_rank** variables.
