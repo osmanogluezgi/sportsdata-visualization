@@ -17,6 +17,8 @@ The analysis is on the data of the retired athletes of *handball, tennis, motorr
 3. There is an individual age for each sport, where athletes have the most success.
 
 ## Scraping
+Data scraping is done using the packages **RSelenium** and **Rvest**.
+
 * Handball: The data set is created by scraping the websites https://www.handball-base.com and "https://www.playmakerstats.com/. Using the names of the athletes, the data was scraped using RSelenium, The first source is used to get the players' **name**, **nation**, **birthdate**, **first and last season** they played. The second source is used to get their success history, which are the data fields such as **number of goals scored**, **number of games played**,and **the respective season** which are used to create the **best rank** and **date_rank** variables.
   - **best rank**: The maximum average goals per game value calculated as **goals scored**/**games in season**) in seniors club games
 * Motorrace: The data set is created by scraping the website https://fiaresultsandstatistics.motorsportstats.com, and since no information is available if the players are active or retired, the scraped data is filtered using the last event date they joined. The racers with a last event between *2000 and 2019* are considered retired.
